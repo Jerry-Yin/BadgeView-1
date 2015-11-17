@@ -1,6 +1,13 @@
 BadgeView for Android
 =====================
-
+我的成果（by Jerry Yin）：
+    一。问题：此BadgeView 与 RadioButton 结合使用时会出现无法点击RadioButton和看不见按钮的情况？
+        解决：1.在原位置的RadioGroup-RadioButton位置，以1:1的比例加上一层透明（android:background="#00000000"）的Button,用来加载此BadgeView; （无边框的button：style="?android:attr/borderlessButtonStyle"）
+            ：2.请注意，如果你的RadioButton设置了点击事件的话，必须将 透明的button 设置为不可以点击的：具体为添加属性：（android:clickable="false"）； 
+    二。在Android Studio环境使用的话，直接用badgeview.jar这个包就可以了；亲测可用。   
+        
+=====================
+ 原文：
 An extended TextView that mimics the iOS Springboard 'badges'. It can be overlaid on any other item.
 
 [Play Store Demo][1]
